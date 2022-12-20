@@ -15,9 +15,26 @@ document.getElementById("increment-btn").addEventListener('click',()=>{
     count += 1;
   // display the new count  
     document.getElementById("count-el").innerText = count;
-})
+});
 
 
 document.getElementById("save-btn").addEventListener('click',()=>{
-  console.log(count)
-})
+  let innerText = document.getElementById("welcome-el").innerText;
+  if(innerText === "Previous Entries:"){
+    document.getElementById("welcome-el").textContent+= " " + document.getElementById("count-el").textContent;
+  }else{
+    // document.getElementById("welcome-el").innerText += " - "+ document.getElementById("count-el").innerText;
+
+    // use textContent =>  removes all of the node's children and replaces them with a single text node with the given string value.
+    document.getElementById("welcome-el").textContent += " - "+ document.getElementById("count-el").textContent;
+  }
+  //reset counter
+  count = 0;
+  document.getElementById("count-el").textContent=0;
+});
+
+
+
+
+
+
