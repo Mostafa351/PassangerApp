@@ -16,3 +16,8 @@ document.getElementById("increment-btn").addEventListener('click',()=>{
   // display the new count  
     document.getElementById("count-el").innerText = count;
 })
+
+
+document.getElementById("save-btn").addEventListener('click',()=>{
+  console.log(count)
+})
